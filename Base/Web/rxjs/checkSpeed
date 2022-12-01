@@ -1,0 +1,26 @@
+    public stop$: Subject<void> = new Subject<void>();
+    public start$: Subject<void> = new Subject<void>();
+    speed: number;
+    testSubscription: Subscription;
+    toastSubscription: Subscription;   
+
+ public speedTest$(): Observable<void> {
+        console.log('speed');
+        return timer(10, 10000).pipe(
+            takeUntil(this.stop$),
+            switchMap((x) => this.slowInternetToast$())
+        );
+    }
+
+    public startSpeedTest() {
+        console.log('start');
+        this.testSubscription = this.speedTest$().subscribe();
+    }
+
+    public stopTestSpeed() {
+        this.stop$.next();
+        this.testSubscription.unsubscribe();
+    }
+
+
+

@@ -1,0 +1,24 @@
+
+
+Ensure text remains visible during webfont load
+Leverage the font-display CSS feature to ensure text is user-visible while webfonts are loading. Learn more.FCPLCP
+URL
+Potential Savings
+/Roboto-Regular.a8d6ac0….ttf(app.2wdelivery.com)
+190 ms
+
+
+Serve static assets with an efficient cache policy 19 resources found
+A long cache lifetime can speed up repeat visits to your page. Learn more.
+
+
+Minimize main-thread work 3.3 s
+Consider reducing the time spent parsing, compiling and executing JS. You may find delivering smaller JS payloads helps with this. Learn moreTBT
+
+Reduce JavaScript execution time 1.6 s
+Consider reducing the time spent parsing, compiling, and executing JS. You may find delivering smaller JS payloads helps with this. Learn more.TBT
+
+
+Does not provide a valid apple-touch-icon
+For ideal appearance on iOS when users add a progressive web app to the home screen, define an `apple-touch-icon`. It must point to a non-transparent 192px (or 180px) square PNG. Learn More.
+

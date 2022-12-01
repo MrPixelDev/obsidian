@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "718666379566c987",
+    "type": "split",
+    "children": [
+      {
+        "id": "24c43574945e050d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e9c71dffedc56e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Base/Architecture/Groking algoritms.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "919bf1ce0c57884d",
+    "type": "split",
+    "children": [
+      {
+        "id": "50e9c5665950e79d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ae9181dc4e073cb3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8bb7180bd6a9cc3e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "shared",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3933e8ffe5c84d27",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e405f7373503258c",
+    "type": "split",
+    "children": [
+      {
+        "id": "126f96c33d293640",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "17d8485dd5d697ee",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Base/Architecture/Groking algoritms.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "6202efd91f4e747f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Base/Architecture/Groking algoritms.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4c8892268fba3e41",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8335720f0deef276",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Base/Architecture/Groking algoritms.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "1e9c71dffedc56e1",
+  "lastOpenFiles": [
+    "Base/Web/CSS/Floating Label.md",
+    "Base/Web/CSS/Round pizza pics.md",
+    "Base/Web/CSS/Timeline.md",
+    "Base/Web/CSS/Autofill.md",
+    "Base/Architecture/Алгоритмы поиска и оценка их сложности. Big-O notation.md",
+    "Base/Architecture/Алгоритмы сортировки и оценка их сложности.md",
+    "Base/Architecture/Рекурсия и алгоритм быстрой сортировки.md",
+    "Base/Architecture/Algorithm Visualizer.md",
+    "Base/Web/JS/JS Fundamentals.md",
+    "Base/Web/CSS/7 cool HTML tags.md"
+  ]
+}

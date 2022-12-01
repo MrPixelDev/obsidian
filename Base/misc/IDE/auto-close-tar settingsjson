@@ -1,0 +1,39 @@
+{
+  "files.autoSave": "onWindowChange",
+  "editor.fontSize": 17,
+  "editor.wordWrap": "bounded",
+  "editor.autoClosingDelete": "never",
+  "telemetry.telemetryLevel": "off",
+  "css.lint.boxModel": "warning",
+  "css.lint.duplicateProperties": "warning",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "explorer.confirmDelete": false,
+  "files.associations": {
+    "*.html": "html",
+    "*.js": "javascript",
+    "*.css": "css"
+  },
+  "editor.linkedEditing": true,
+  "explorer.confirmDragAndDrop": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.tabSize": 2,
+  "quokka.compactMessageOutput": true,
+  "reactSnippets.settings.languageScopes": "typescript,typescriptreact,javascript,javascriptreact,html",
+  "ecsstractor_port.destination": "tab",
+  "ecsstractor_port.bem_nesting": true,
+  "path-autocomplete.pathMappings": {
+    "@img": "${folder}/src/img",
+    "@scss": "${folder}/src/scss",
+    "@js": "${folder/src/js}"
+  }
+}
+

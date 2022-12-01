@@ -1,0 +1,14 @@
+import { Component } from "@angular/core";
+import { NGXLogger } from "ngx-logger";
+
+@Component({
+  selector: "your-component",
+  templateUrl: "./your.component.html",
+  styleUrls: ["your.component.scss"],
+})
+export class YourComponent {
+  constructor(private logger: NGXLogger) {
+    this.logger.error("Your log message goes here");
+    this.logger.warn("Multiple", "Argument", "support");
+  }
+}

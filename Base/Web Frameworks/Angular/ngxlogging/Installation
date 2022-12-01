@@ -1,0 +1,23 @@
+npm install --save ngx-logger
+
+import { LoggerModule, NgxLoggerLevel } from "ngx-logger";
+// HttpClientModule is only needed if you want to log on server or if you want to inspect sourcemaps
+import { HttpClientModule } from "@angular/common/http";
+
+@NgModule({
+  declarations: [AppComponent, ...],
+  imports:
+  [
+    // HttpClientModule is only needed if you want to log on server or if you want to inspect sourcemaps
+    HttpClientModule,
+    LoggerModule.forRoot({
+      serverLoggingUrl: '/api/logs',
+      level: NgxLoggerLevel.DEBUG,
+      serverLogLevel: NgxLoggerLevel.ERROR
+    }),
+    ...
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+}

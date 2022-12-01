@@ -1,0 +1,19 @@
+function displayConfirmNotification() {
+  const options = {
+    body: "You sucessfully subscribe to our Notification service!",
+  };
+  new Notification("Successfully subscribed!", options);
+}
+
+////////// with service worker
+
+function displayConfirmNotification() {
+  if ("serviceWorker" in navigator) {
+    const options = {
+      body: "You sucessfully subscribe to our Notification service!",
+    };
+    navigator.serviceWorker.ready.then((swreg) => {
+      swreg.showNotification("Successfully subscribed! (from SW!)", options);
+    });
+  }
+}

@@ -1,0 +1,11 @@
+function askForNotificationPermission() {
+  Notification.requestPermission((result) => {
+    console.log("[line 30][app.js] 🚀 result: ", result);
+    if (result !== "granted") {
+      console.log("No notification permission granted!");
+      return;
+    }
+    // TODO: SHOW NOTIFICATION
+    displayConfirmNotification();
+  });
+}

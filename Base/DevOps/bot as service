@@ -1,0 +1,23 @@
+nano /lib/systemd/system/%name%.service
+---
+[Unit]
+Description=%%
+After=network.target
+
+[Service]
+Type=Simple
+Restart=always
+WorkingDirectory=/path/to/bot/directory/
+VIRTUAL_ENV=/path/to/bot/directory/venv
+Environment=PATH=$VIRTUAL_ENV/bin:$PATH
+ExecStart=/path/to/bot/venv/bin/python app.py
+Restart=on-failure/always
+
+[Install]
+WantedBy=multi-user.target
+---
+sudo systemctl daemon-reload
+sudo systemctl enable %name%
+sudo systemctl restart %name%
+sudo systemctl status %name%
+https://www.figma.com/email/validate/stv2-1093037304588627614-4ae3139fe101f185748fc040b8e040e033ddb852138231191b2514d528c5a3bc-1649134802?fuid=1093037304588627614

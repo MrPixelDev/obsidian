@@ -1,0 +1,1 @@
+sudo gpasswd -a your-user-name vboxsf

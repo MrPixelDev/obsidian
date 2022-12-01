@@ -1,0 +1,8 @@
+import { LoggerTestingModule } from 'ngx-logger/testing';
+
+TestBed.configureTestingModule({
+  imports: [
+    LoggerTestingModule
+  ],
+  ...
+});

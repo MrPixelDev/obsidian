@@ -1,0 +1,15 @@
+Install Node.js
+Install Express generator so that web application can be generated in seconds: npm install express-generator -g
+Generate a web application and install all dependencies:
+    express myapp
+    cd myapp
+    npm install
+Edit myapp/app.js and insert following code block before the line app.use('/', index);:
+    app.use(function(req, res) {
+      console.log(req.headers);
+      console.log(req.cookies);
+      console.log(req.body);
+      res.send('OK');
+    });
+That's it. Now run DEBUG=myapp:* npm start in console and start the web applicaiton. All HTTP requests sent to host localhost:3000 will be recorded with their headers, cookies and body.
+If you need to write these logs into a file, a logger module can be used, such as https://www.npmjs.com/package/log.

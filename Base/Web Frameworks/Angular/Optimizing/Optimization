@@ -1,0 +1,65 @@
+Google Closure Compiler (uglifier with tree-shaking)
+http://blog.mgechev.com/2016/07/21/even-smaller-angular2-applications-closure-tree-shaking/
+
+Lazy-Loading of Resources
+https://github.com/mgechev/ngx-quicklink
+
+Don't Lazy-Load the Default Route
+
+Кеширование!
+
+https://angular.io/guide/service-worker-intro
+https://developers.google.com/web/updates/2015/11/app-shell?hl=en
+
+https://jakearchibald.com/2014/offline-cookbook/
+
+web workers
+https://github.com/angular/angular/tree/master/modules/playground/src/web_workers
+https://www.youtube.com/watch?v=Kz_zKXiNGSE
+
+
+Pure pipes
+interface PipeMetadata {
+  name: string;
+  pure: boolean;
+}
+
+*ngFor directive
+
+Директива *ngFor используется для отрисовки коллекции.
+Use trackBy option
+
+По умолчанию *ngFor сравнивает объекты по ссылке.
+
+@Component({
+  selector: 'yt-feed',
+  template: `
+  <h1>Your video feed</h1>
+  <yt-player *ngFor="let video of feed; trackBy: trackById" [video]="video"></yt-player>
+`
+})
+export class YtFeedComponent {
+  feed = [
+    {
+      id: 3849, // обратите внимание на поле "id", мы ссылаемся на него в "trackById" функции
+      title: "Angular in 60 minutes",
+      url: "http://youtube.com/ng2-in-60-min",
+      likes: "29345"
+    },
+    // ...
+  ];
+
+  trackById(index, item) {
+    return item.id;
+  }
+}
+
+https://netbasal.com/angular-2-improve-performance-with-trackby-cc147b5104e5
+
+////////////////////
+https://coryrylan.com/blog/custom-preloading-and-lazy-loading-strategies-with-angular
+PreloadAllModules
+
+
+https://dev.to/dylanvdmerwe/reduce-angular-style-size-using-purgecss-to-remove-unused-styles-3b2k
+

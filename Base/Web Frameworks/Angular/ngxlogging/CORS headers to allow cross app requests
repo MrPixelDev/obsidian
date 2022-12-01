@@ -1,0 +1,88 @@
+=================================
+access-control-allow-origin nodejs express
+=================================
+
+// Add headers
+app.use(function (req, res, next) {
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8888');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    // Pass to next layer of middleware
+    next();
+});
+
+=================================
+access-control-allow-origin node
+=================================
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+=================================
+express js cors
+=================================
+
+var express = require('express')
+var cors = require('cors')  //use this
+var app = express()
+
+app.use(cors()) //and this
+
+app.get('/user/:id', function (req, res, next) {
+  res.json({user: 'CORS enabled'})
+})
+
+app.listen(5000, function () {
+  console.log('CORS-enabled web server listening on port 5000')
+})
+
+=================================
+add access-control-allow-origin in node js
+=================================
+
+// Install cors package: npm install cors
+const express = require("express");
+const app = express();
+const cors = require('cors');
+app.use(cors());
+// your http request should work after this
+
+=================================
+access-control-allow-origin nodejs express
+=================================
+
+var express = require('express');
+var app = express();
+var Assessment = require('../app/models/assessment');
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.post('/api/status', function (req, res, next) {
+    // your code goes here
+});
+
+module.exports = app;
+
+=================================
+express cors policy no 'access-control-allow-origin'
+=================================
+$ npm install cors
+
