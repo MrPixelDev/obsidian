@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "24c43574945e050d",
+        "id": "00088498e46454f4",
         "type": "tabs",
         "children": [
           {
-            "id": "1e9c71dffedc56e1",
+            "id": "00c80ee0b0cc6c56",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Base/Architecture/Groking algoritms.md",
+                "file": "Base/Web/JS/Websockets.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b49d5e472dad0d04",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Base/DevOps/Ssh-keygen.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b11c72315c723249",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Base/DevOps/pm2.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -48,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "shared",
+                "query": "python",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Base/Architecture/Groking algoritms.md",
+                "file": "Base/DevOps/pm2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Base/Architecture/Groking algoritms.md",
+                "file": "Base/DevOps/pm2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Base/Architecture/Groking algoritms.md"
+                "file": "Base/DevOps/pm2.md"
               }
             }
           }
@@ -137,17 +162,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1e9c71dffedc56e1",
+  "active": "ae9181dc4e073cb3",
   "lastOpenFiles": [
-    "Base/Web/CSS/Floating Label.md",
-    "Base/Web/CSS/Round pizza pics.md",
-    "Base/Web/CSS/Timeline.md",
-    "Base/Web/CSS/Autofill.md",
-    "Base/Architecture/Алгоритмы поиска и оценка их сложности. Big-O notation.md",
-    "Base/Architecture/Алгоритмы сортировки и оценка их сложности.md",
-    "Base/Architecture/Рекурсия и алгоритм быстрой сортировки.md",
-    "Base/Architecture/Algorithm Visualizer.md",
-    "Base/Web/JS/JS Fundamentals.md",
-    "Base/Web/CSS/7 cool HTML tags.md"
+    "Base/DevOps/Ssh-keygen.md",
+    "Base/Web/JS/Websockets.md",
+    "Base/Web Frameworks/React/Env in React.md",
+    "Daily/k-ip.md",
+    "Base/DevOps/docker/docker.md",
+    "Daily/Собес заметки/Misc.md",
+    "Base/Web/JS/Compare Versions.md",
+    "Base/Web/JS/Get search parameter of URL.md",
+    "Base/Web/JS/Current device ios or android.md",
+    "Daily/Собес заметки/Python.md"
   ]
 }

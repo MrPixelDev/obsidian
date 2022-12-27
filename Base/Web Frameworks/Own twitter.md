@@ -139,7 +139,10 @@ INSERT INTO contents (tweet, img)
 
 VALUES ('Hello World!', ''), ('Content creation and programming are basically full time jobs. I have enough projects and work to keep me busy for years. Working in tech is definitely going to entertain you for a long time which is why so many people want to transition into this field.', ''), ('JavaScript developers are forever in high demand', '');
 ```
-
+If #error gen_random_uuid() Does not exist:
+```sql
+CREATE EXTENSION pgcrypto;
+```
 If you open the Postgres.app application on your computer you should see all of the databases including the one which we just created.
 
 [![https://res.cloudinary.com/d74fh3kw/image/upload/c_scale,w_800/v1650553228/postgresql-app-twitter_ygwp3z.jpg](https://res.cloudinary.com/practicaldev/image/fetch/s--EoH3gpMA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/d74fh3kw/image/upload/c_scale%2Cw_800/v1650553228/postgresql-app-twitter_ygwp3z.jpg)](https://res.cloudinary.com/practicaldev/image/fetch/s--EoH3gpMA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/d74fh3kw/image/upload/c_scale%2Cw_800/v1650553228/postgresql-app-twitter_ygwp3z.jpg)
