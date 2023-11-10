@@ -120,7 +120,151 @@ postgres=# alter database dbname owner to myuser;
 ALTER DATABASE
 ```
 
+## Create Table
+```
+postgres=# CREATE TABLE tablename (
+postgres(# id BIGSERIAL NOT NULL PRIMARY KEY,
+postgres(# first_name VARCHAR(50) NOT NULL,
+postgres(# last_name VARCHAR(50) NOT NULL,
+postgres(# gender VARCHAR(50) NOT NULL,
+postgres(# email VARCHAR(150),
+postgres(# date_of_birth DATE NOT NULL
+postgres(# );
+```
+
+To look up list of tables(relations):
+`postgres=# \d`
+
+To look at the table structure:
+`postgres=# \d tablename`
+
+
+## **Copy table Example**
+
+`CREATE TABLE fruits_2 AS TABLE fruits;`
+
+`CREATE TABLE fruits_3 AS TABLE fruits WITH NO DATA;`
+
+## Insert Row
+
+```
+postgres=# INSERT INTO tablename (
+postgres(# first_name, last_name, gender, email, date_of_birth)
+postgres=# VALUES('John', 'Doe', 'Male', 'Jd@mail.com', '2001-01-02');
+```
+
+## Selecting
+
+`SELECT field1, field2 FROM tablename;`
+`SELECT * FROM tablename ORDER BY field ASC/DESC;`
+`SELECT DISTINCT field FROM tablename ORDER BY field;`
+(DISTINCT = set)
+
+`SELECT * FROM tablename WHERE field = data;`
+`SELECT * FROM tablename WHERE field = data (AND/OR) field2 = data2;`
+`SELECT * FROM tablename LIMIT 20;`
+`SELECT * FROM tablename OFFSET 10 LIMIT 5;`
+(OFFSET 10 = from 11 position)
+
+`SELECT * FROM tablename OFFSET 10 FETCH FIRST 5 ROW ONLY;`
+(FETCH FIRST 5 ROW ONLY = LIMIT FIRST 5)
+
+`SELECT * FROM tablename WHERE field IN (data1, data2, data3);`
+`SELECT * FROM tablename WHERE field BETWEEN data1 AND data2;`
+`SELECT * FROM tablename WHERE field LIKE %data;`
+(% = * wildcard number of sym)
+(LIKE = strict, iLIKE = unstrict)
+
+`SELECT field, COUNT(*) FROM tablename GROUP BY field;`
+(field | count)
+
+`SELECT field, COUNT(*) FROM tablename GROUP BY field HAVING COUNT(*) > 10 ORDER BY field DESC;`
+`SELECT field1, field2 AS alias1, field3 AS alias2, field4 AS alias3, field5, field6, field7 FROM tablename;`
+
+`DELETE FROM tablename WHERE field = data;`
+`SELECT COALESCE(empty_field, 'not applicable') FROM tablename;`
+(COALESCE accepts only null, not false)
+
+`SELECT MAX(numeric_field) FROM tablename;`
+`SELECT MIN(numeric_field) FROM tablename;`
+`SELECT ROUND(AVG(numeric_field)) FROM tablename;`
+(ROUND = INT)
+
+`SELECT field1, field2, MAX(field3) FROM tablename GROUP BY field1, field2;`
+`SELECT field, SUM(field2) FROM tablename GROUP BY field;`
+`SELECT 100 + 2;`
+`SELECT field1, field2, field3, ROUND(field4) FROM tablename;`
+
+### Time and date
+
+`SELECT NOW();`
+`SELECT NOW()::DATE;`
+`SELECT NOW()::TIME`;
+`SELECT NOW() - INTERVAL '1 YEAR';`
+`SELECT NOW() - INTERVAL '10 MONTH';`
+`SELECT NOW() + INTERVAL '100 YEAR';`
+`SELECT EXTRACT(YEAR FROM NOW());`
+`SELECT EXTRACT(DOW FROM NOW());`
+`SELECT field1, field2, field3, field4, field5, AGE(NOW(), field5) AS age FROM tablename;`
+(AGE - From timestamp to timestamp)
+
+## Primary keys and constraints
+`\d tablename => Indexes: "tablename_pkey" PRIMARY KEY, btree (field)`
+`ALTER TABLE tablename DROP CONSTRAINT tablename_pkey;`
+`ALTER TABLE tablename ADD PRIMARY KEY(id);`
+(ALTER TABLE - alternating table)
+(DROP CONSTRAINT - Снять ограничение)
+
+`SELECT field, COUNT(*) FROM tablename GROUP BY field HAVING COUNT(*) > 1;`
+`ALTER TABLE tablename ADD CONSTRAINT unique_field UNIQUE (field);`
+`ALTER TABLE tablename ADD CONSTRAINT field_constraint CHECK (field = 'data1' OR field = 'data2');`
+
+## Upserts and conflict cures
+
+`UPDATE tablename SET field = data WHERE field2 = data2;`
+
+`INSERT INTO tablename (field1, field2, field3, field4) VALUES (data1, data2, DATE data3, data4) ON CONFLICT (conflict constraint field) DO NOTHING;`
+
+`INSERT INTO tablename (field1, field2, field3, field4) VALUES (data1, data2, DATE data3, data4) ON CONFLICT (conflict constraint field) DO UPDATE SET field = EXCLUDED.field;`
+(In existent conflict row field from condition sets to new excluded data) - UPSERT Update + Insert
+
+## Foreign keys
+
+`ALTER TABLE tablename1 ADD table2pkeyfield type REFERENCES tablename2 (pkeyfield);`
+`ALTER TABLE tablename ADD UNIQUE(unique_field);`
+(Make unique_field UNIQUE)
+`UPDATE table1 SET fkeyfield = data WHERE pkeyfield = data2;`
+
+
+### Join
+`SELECT table1.field1, table2.field2, table2.field3 FROM table1 JOIN table2 ON table1.fkeyid = table2.pkeyid;`
+
+### Left Join
+`SELECT * FROM table1 LEFT JOIN table2 ON table2.pkeyid = table1.fkeyid WHERE field IS NOT NULL;`
+(Left join with condition = join without condition)
+
+### Right Join
+`SELECT * FROM table1 RIGHT JOIN table2 ON table2.pkeyid = table1.fkeyid;`
+
+### Outer Join
+`SELECT * FROM table1 FULL OUTER JOIN table2 ON table2.pkeyid = table1.fkeyid;`
+
+
+## UUID
+
+`SELECT * FROM pg_available_extensions;`
+( #extensions )
+`CREATE EXTENSION IF NOT EXISTS "uuid-ossp";`
+`\df` - #functions
+`SELECT uuid_generate_v4();`
+
+
 ## Backup and Restore
+
+`\copy (SELECT * FROM tablename1 LEFT JOIN tablename2 ON table2.pkeyid = table1.fkeyid WHERE fkeyid IS NOT NULL) TO '/home/username/Documents/db' DELIMITER ',' CSV HEADER;`
+(DELIMITER - divider for CSV(Comma separated value))
+(HEADER - Names of the columns)
+
 There are near to endless combinations in tools and parameters to backup postgres databases. Below you can find some examples using the Postgres built-in tools `pgdump`, `pg_basebackup` and `pg_restore`.
 ### pg_dump / pg_dumpall
 

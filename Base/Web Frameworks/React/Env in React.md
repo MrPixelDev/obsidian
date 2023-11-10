@@ -85,3 +85,18 @@ For example vercel doesn't accept '.' in the env file name at all.
 1- [https://medium.com/swlh/keeping-env-variables-private-in-react-app-fa44a9b33c31](https://medium.com/swlh/keeping-env-variables-private-in-react-app-fa44a9b33c31)
 
 2- [https://create-react-app.dev/docs/adding-custom-environment-variables/](https://create-react-app.dev/docs/adding-custom-environment-variables/)
+
+#cross-env 
+
+## Cross-env
+
+npm i cross-env
+
+in package.json:
+"start:dev": "cross-env NODE_ENV=dev"
+"start": "cross-env NODE_ENV=prod"
+
+```
+envFilePath: `.${process.env.NODE_ENV}.env`
+```
+
